@@ -1,0 +1,15 @@
+{
+  "name": "Google Tasks Filter",
+  "version": "1.0",
+  "description": "Adds a local tag filter for Google Tasks",
+  "manifest_version": 3,
+  "permissions": ["storage"], 
+  "content_scripts": [
+    {
+      "matches": ["*://tasks.google.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ]
+}
